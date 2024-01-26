@@ -1,4 +1,4 @@
-# Awesome Home Assistant -  docker on Raspberry Pi 3b+ raspberry pi os lite (64-bit) [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
+# Awesome Home Assistant -  Home Assistant OS on Windows10 (64-bit) [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 <!--lint disable double-link-->
 
 <div align="center">

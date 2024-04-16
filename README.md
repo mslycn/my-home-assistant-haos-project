@@ -54,8 +54,8 @@ to suggest additions, updates or removals.
   - [Twitter](#twitter)
 - [Uncategorized](#uncategorized)
 - [Alternative Home Automation Software](#alternative-home-automation-software)
-- [Other Awesome Lists](#other-awesome-lists)
-- [Trademark Legal Notice](#trademark-legal-notice)
+- [Local Voice in Home Assistant OS](#other-awesome-lists)
+- [Matter Server in Home Assistant OS](#trademark-legal-notice)
 
 ## How to use
 
@@ -235,7 +235,7 @@ are some alternatives._
 - [Gladys](https://github.com/GladysProject/Gladys) - Open source program which runs on your Raspberry Pi.
 - [SmartThings](https://www.smartthings.com/) - Commercial home automation hub by Samsung.
 
-## Local Voice in Home Assistant os
+## Local Voice in Home Assistant OS
 
 _Other amazingly awesome lists that can be found on the great and dangerous
 interwebs._
@@ -247,7 +247,7 @@ interwebs._
 - [awesome-mqtt](https://github.com/hobbyquaker/awesome-mqtt#readme) - Curated list of MQTT related stuff.
 - [awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) - Curated list of awesome self hosted software.
 
-## Matter Server in Home Assistant os
+## Matter Server in Home Assistant OS
 
 This awesome list is an active open-source project and is always open to
 people who want to contribute to it. We have set up a separate document

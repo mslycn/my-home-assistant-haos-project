@@ -1,4 +1,9 @@
 
+~~~
+https://github.com/hacs/integration/releases
+~~~
+
+
 ## 在线安装 - SSH命令行的方式安装
 
 ### IP 

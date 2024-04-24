@@ -3,6 +3,10 @@
 https://github.com/hacs/integration/releases
 ~~~
 
+~~~
+https://github.com/hacs/integration/releases/download/1.34.0/hacs.zip
+~~~
+
 
 ## 在线安装 - SSH命令行的方式安装
 

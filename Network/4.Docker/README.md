@@ -1,4 +1,10 @@
+## 容器内修改配置文件
 
+Docker 1.2.0 开始支持在运行中的容器里直接编辑 /etc/resolv.conf 、/etc/hostname、/etc/hosts。
+这些修改是临时的，只在运行的容器中保留，容器终止或重启并不会被保存下来。也不会被docker commit提交。
+
+                        
+原文链接：https://blog.csdn.net/m0_45406092/article/details/105299138
 ~~~
 root@raspberrypi:~# docker exec -it ha sh
 /config # mount
@@ -29,4 +35,12 @@ ff02::2		ip6-allrouters
 127.0.1.1		raspberrypi
 185.199.108.133 raw.githubusercontent.com
 140.82.114.4 github.com
+~~~
+
+配置全部容器的 DNS
+可以在/etc/docker/daemon.json文件中增加以下内容来设置。
+~~~
+
+
+
 ~~~

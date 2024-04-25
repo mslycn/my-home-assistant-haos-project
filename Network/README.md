@@ -36,7 +36,7 @@ interfaces:
     - fd18:f22c:7814:d900:1af2:2cff:fe78:14d9
     - '::'
     ready: true
-  mac: 00:0C:29:73:2B:65
+  mac: 00:0C:
   primary: true
   type: ethernet
   vlan: null

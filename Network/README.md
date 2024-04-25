@@ -11,6 +11,20 @@ router的DNS->缩主机的DNS /etc/resolv.conf -> 全部容器的 DNS 可以在/
 容器内的/etc/resolv.conf改动后，不再关联缩主机的/etc/resolv.conf
 
 
+Docker容器实例中解析DNS的顺序
+~~~
+查找Docker daemon内置的DNS服务器127.0.0.11
+
+查找docker run创建容器实例时通过 --dns参数（容器定制）设置的DNS服务器
+
+查找Docker daemon通过 --dns参数，或/etc/docker/daemon.json(容器通用设置)文件设置的DNS服务器
+
+查找Docker宿主机上/etc/resolv.conf文件中配置的DNS服务器
+
+最后，查找Google的DNS服务器，如8.8.8.8和8.8.4.4，2001:4860:4860::8888和2001:4860:4860::8844
+~~~
+简单来说，就是由近及远原则，内置服务器优先级最高，其次容器定制的，再其次容器通用的，最后是主机的dns。
+
 
 HassOS使用nmcli设置静态IPv4地址
 https://blog.csdn.net/gongchenyu/article/details/134675480

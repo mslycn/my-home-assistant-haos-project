@@ -2,6 +2,7 @@ dns nameserver
 
 容器内的/etc/resolv.conf改动后，不再关联缩主机的/etc/resolv.conf，不管这种改动是在容器中手动改动了/etc/resolv.conf文件，还是通过 --dns, --dns-search, or --dns-opt启动时改动（实际上系统启动时自动修改了容器内的/etc/resolv.conf）
 
+从Docker 1.10版本开始，docker daemon实现了一个容器内嵌的DNS server
 
 ## 容器内修改配置文件
 
@@ -52,7 +53,16 @@ ff02::2		ip6-allrouters
 
 --dns-search=DOMAIN 设定容器的搜索域，当设定搜索域为 .example.com 时，在搜索一个名为 host 的主机时，DNS 不仅搜索 host，还会搜索 host.example.com。
 
-## 如果在容器启动时没有指定最后两个参数，Docker 会默认用主机上的 /etc/resolv.conf 来配置容器。
+## Docker 会默认用主机上的 /etc/resolv.conf 来配置容器。
+
+docker daemon会将copy本主机的/etc/resolv.conf，然后对该copy进行处理（将那些/etc/resolv.conf中ping不通的nameserver项给抛弃）,处理完成后留下的部分就作为该容器内部的/etc/resolv.conf。
+
+~~~
+1 如果docker run时不含 --dns=IP_ADDRESS…, --dns-search=DOMAIN…, or --dns-opt=OPTION…参数，docker daemon会将copy本主机的/etc/resolv.conf，然后对该copy进行处理（将那些/etc/resolv.conf中ping不通的nameserver项给抛弃）,处理完成后留下的部分就作为该容器内部的/etc/resolv.conf。
+
+因此，如果你想利用宿主机中的/etc/resolv.conf配置的nameserver进行域名解析，那么你需要在宿主机中该dns service配置一个宿主机内容器能ping通的IP。
+2 注意容器内/etc/resolv.conf中配置的DNS server，只有当内置DNS server无法解析某个name时，才会用到。
+~~~
 
 
 配置全部容器的 DNS

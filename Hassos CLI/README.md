@@ -20,3 +20,21 @@
 
 ~~~
 supervisor logs
+
+
+docker ps
+~~~
+PROTECTION MODE ENABLED!
+
+To be able to use this command, you'll need to disable
+protection mode on this add-on. Without it, the add-on
+is unable to access Docker.
+
+Steps:
+ - Go to the Settings Panel.
+ - Enter the 'Add-ons' menu.
+ - Click on the Advanced SSH & Web Terminal add-on.
+ - Set the 'Protection mode' switch to off.
+ - Restart the add-on.
+
+~~~

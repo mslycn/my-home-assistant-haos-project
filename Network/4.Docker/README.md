@@ -2,7 +2,7 @@ dns nameserver
 
 ## Docker 会默认用主机上的 /etc/resolv.conf 来配置容器。
 
-docker daemon会将copy本主机的/etc/resolv.conf，然后对该copy进行处理（将那些/etc/resolv.conf中ping不通的nameserver项给抛弃）,处理完成后留下的部分就作为该容器内部的/etc/resolv.conf。
+docker daemon会将copy缩主机的/etc/resolv.conf，然后对该copy进行处理（将那些/etc/resolv.conf中ping不通的nameserver项给抛弃）,处理完成后留下的部分就作为该容器内部的/etc/resolv.conf。
 
 
 容器内的/etc/resolv.conf改动后，不再关联缩主机的/etc/resolv.conf，不管这种改动是在容器中手动改动了/etc/resolv.conf文件，还是通过 --dns, --dns-search, or --dns-opt启动时改动（实际上系统启动时自动修改了容器内的/etc/resolv.conf）

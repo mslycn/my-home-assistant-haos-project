@@ -1,3 +1,17 @@
+缩主机的DNS /etc/resolv.conf -> 全部容器的 DNS 可以在/etc/docker/daemon.json -> 容器内的/etc/resolv.conf改动(不再关联缩主机的/etc/resolv.conf)
+
+缩主机的DNS /etc/resolv.conf
+
+配置全部容器的DNS /etc/docker/daemon.json
+
+配置全部容器的 DNS 可以在/etc/docker/daemon.json文件中增加以下内容来设置
+
+容器内的DNS /etc/resolv.conf
+
+容器内的/etc/resolv.conf改动后，不再关联缩主机的/etc/resolv.conf
+
+
+
 HassOS使用nmcli设置静态IPv4地址
 https://blog.csdn.net/gongchenyu/article/details/134675480
 

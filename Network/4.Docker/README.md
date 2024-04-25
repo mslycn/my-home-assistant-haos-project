@@ -1,3 +1,8 @@
+dns nameserver
+
+容器内的/etc/resolv.conf改动后，不再关联缩主机的/etc/resolv.conf，不管这种改动是在容器中手动改动了/etc/resolv.conf文件，还是通过 --dns, --dns-search, or --dns-opt启动时改动（实际上系统启动时自动修改了容器内的/etc/resolv.conf）
+
+
 ## 容器内修改配置文件
 
 Docker 1.2.0 开始支持在运行中的容器里直接编辑 /etc/resolv.conf 、/etc/hostname、/etc/hosts。

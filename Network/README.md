@@ -11,7 +11,7 @@ router的DNS->缩主机的DNS /etc/resolv.conf -> 全部容器的 DNS 可以在/
 容器内的/etc/resolv.conf改动后，不再关联缩主机的/etc/resolv.conf
 
 
-Docker容器实例中解析DNS的顺序
+### Docker容器实例中解析DNS的顺序
 ~~~
 查找Docker daemon内置的DNS服务器127.0.0.11
 

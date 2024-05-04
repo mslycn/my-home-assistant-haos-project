@@ -9,6 +9,12 @@
   <a href="https://awesome-ha.com"><strong>https://awesome-ha.com</strong></a>
 </div>
 
+Welcome to msly.cn
+
+Useful scripts, snippets and shaders here it is gathered for free.
+
+We have collected most of the scripts from external sources like Home Assistant Communities (Forums, Answers) and some of them are made by us.
+
 Home Assistant is an open source home automation that puts local control and
 privacy first. Powered by a worldwide community of tinkerers and DIY
 enthusiasts. Perfect to run on a Raspberry Pi or a local server.

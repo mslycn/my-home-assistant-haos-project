@@ -1,4 +1,4 @@
-# SSCMS
+# HASSOS
 
 <img src="https://sscms.com/docs/v7/logo.png" height="220" align="center">
 <br /><br />

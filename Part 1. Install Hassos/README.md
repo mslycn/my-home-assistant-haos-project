@@ -1,20 +1,4 @@
 
-Configure Docker to use a proxy server
+Install Home Assistant OS On Windows Using VMware Workstation 17 Pro
 
-Configure the Docker client
-You can add proxy configurations for the Docker client using a JSON configuration file, located in ~/.docker/config.json. Builds and containers use the configuration specified in this file.
-
-~~~
-{
- "proxies": {
-   "default": {
-     "httpProxy": "http://proxy.example.com:3128",
-     "httpsProxy": "https://proxy.example.com:3129",
-     "noProxy": "*.test.example.com,.example.org,127.0.0.0/8"
-   }
- }
-}
-
-~~~
-
-https://docs.docker.com/network/proxy/
+https://blog.matterxiaomi.com/blog/install-home-assistant-on-windows-vmware-pro/

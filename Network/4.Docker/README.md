@@ -16,7 +16,7 @@ dns nameserver
 这样每次启动的容器 DNS 自动配置为 114.114.114.114 和 8.8.8.8
 
 
-# 修改docker中的/etc/hosts
+# 配置docker中的/etc/hosts
 
 ## Docker 会默认用主机上的 /etc/resolv.conf 来配置容器。
 

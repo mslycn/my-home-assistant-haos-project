@@ -1,4 +1,6 @@
+~~~
 router的DNS->缩主机的DNS /etc/resolv.conf -> 全部容器的 DNS 可以在/etc/docker/daemon.json -> 容器内的/etc/resolv.conf改动(不再关联缩主机的/etc/resolv.conf)
+~~~
 
 2.缩主机的DNS /etc/resolv.conf
 

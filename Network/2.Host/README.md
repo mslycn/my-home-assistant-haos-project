@@ -40,3 +40,12 @@ ff02::2		ip6-allrouters
 185.199.108.133 raw.githubusercontent.com
 140.82.114.4 github.com
 ~~~
+
+## 刷新DNS缓存
+
+debian12 刷新dns
+
+~~~
+sudo service networking restart
+~~~
+

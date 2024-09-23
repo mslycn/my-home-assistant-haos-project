@@ -1,5 +1,23 @@
 dns nameserver
 
+# 配置全部容器的DNS
+
+可以在/etc/docker/daemon.json文件中增加以下内容来设置。
+~~~
+
+{
+	"dns" : [
+		"114.114.114.114",
+		"8.8.8.8"
+	]
+}
+~~~
+
+这样每次启动的容器 DNS 自动配置为 114.114.114.114 和 8.8.8.8
+
+
+# 修改docker中的/etc/hosts
+
 ## Docker 会默认用主机上的 /etc/resolv.conf 来配置容器。
 
 docker daemon会copy缩主机的/etc/resolv.conf，然后对该copy进行处理（将那些/etc/resolv.conf中ping不通的nameserver项给抛弃）,处理完成后留下的部分就作为该容器内部的/etc/resolv.conf。

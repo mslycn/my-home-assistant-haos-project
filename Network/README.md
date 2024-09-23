@@ -8,7 +8,7 @@ router的DNS->缩主机的DNS /etc/resolv.conf -> 全部容器的 DNS 可以在/
 
 配置全部容器的 DNS 可以在/etc/docker/daemon.json文件中增加以下内容来设置
 
-4.容器内的DNS /etc/resolv.conf
+4.配置容器内的DNS /etc/resolv.conf
 
 容器内的/etc/resolv.conf改动后，不再关联缩主机的/etc/resolv.conf
 

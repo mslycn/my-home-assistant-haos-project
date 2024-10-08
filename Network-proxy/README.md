@@ -40,6 +40,10 @@ You can add proxy configurations for the Docker client using a JSON configuratio
 
 ~~~
 
+## Docker Build 代理
+
+虽然 docker build 的本质，也是启动一个容器，但是环境会略有不同，用户级配置无效。在构建时，需要注入 http_proxy 等参数。
+
 https://www.cnblogs.com/pgyLang/p/17789930.html
 
 https://docs.docker.com/network/proxy/

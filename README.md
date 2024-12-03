@@ -4,8 +4,8 @@
 
 
 local：F:\developer_Xiaomi\my-home-assistant-haos-project
-remote：
-https://github.com/mslycn/my-home-assistant-haos-project
+
+remote：https://github.com/mslycn/my-home-assistant-haos-project
 
 Hassos 相关基础知识梳理
 

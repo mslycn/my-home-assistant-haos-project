@@ -266,6 +266,11 @@ For a full list of all authors and contributors, check the
 
 Thank you for being involved! 😍
 
+~~~
+git add .
+
+~~~
+
 ## Trademark Legal Notice
 
 This Awesome list is not created, developed, affiliated, supported, maintained

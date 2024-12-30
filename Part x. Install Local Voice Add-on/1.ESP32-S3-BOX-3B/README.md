@@ -9,7 +9,7 @@ https://github.com/esphome/firmware/tree/main/wake-word-voice-assistant
 
 # Custom
 
-ESP32-S3-Box3 Learning Example
+ESP32-S3-Box3 Custom Learning Example
 
 https://github.com/BigBobbas/ESP32-S3-Box3-Custom-ESPHome
 

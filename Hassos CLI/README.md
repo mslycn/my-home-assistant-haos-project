@@ -1,3 +1,6 @@
+home-assistant-cli
+
+
 ~~~
   addons         Install, update, remove and configure Home Assistant add-ons
   audio          Audio device handling.

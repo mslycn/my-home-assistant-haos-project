@@ -75,7 +75,7 @@ You can navigate through the list by:
 - Go through our [_Contents list_](#contents)
 - Alternatively, use the search on our website: <https://www.awesome-ha.com>
 
-## Installing
+## Installing Hassos
 
 Home Assistant has several installation methods; each has advantages and
 disadvantages. Many people have different opinions and personal favorites.

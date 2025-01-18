@@ -50,7 +50,9 @@ vm安装的os 只有社区仓库，官方仓库不显示，添加了官方仓库
 
 添加home assistant community add ons 源。需要网络环境
 
-Step 1.启动高级模式
+Step 1.启动高级模式（Advanced mode）
+
+http://192.168.2.124:8123/profile/general
 
 step 2.change DNS settings in hassOS
 ~~~
@@ -62,27 +64,6 @@ detail:http://localhost:4999/boards/topic/16771/add-ons-add-on#57814
 
 
 
-## 关于版本
-
-不同的 esp32 支持包的版本所依赖的其它包并不完全相同。只有在 Arduino IDE 的 Preference 中附加网址更新信息后，再打开开发板管理器，才可能找到 ESP32 安装包，并选择所需版本。
-
-已下载和安装的版本如下，它们的副本都备份在本地“专业软件”目录下。
-
-2.0.10
-
-2.0.9 https://mirrors.sdu.edu.cn/github-release/espressif_arduino-esp32/2.0.10/package_esp32_dev_index.json
-
-## 具体步骤
-
-下载 Arduino 所必须的 Package 描述文件 package_esp32_index.json。放到 用户文件夹 \AppData\Local\Arduino15\下，如果没有相关文件夹请自行建立
-
-下载 esp32-版本号.zip，注意版本号要正确。
-
-下载所需的支持包，全部放入 ~\Arduino15\staging\packages 。注意：和自己的开发板无关的开发包不用管，这样可以节省时间。
-
-打开 Arduino 附加开发板管理器网址。Arduino IDE>文件>首选项>附加开发板管理器网址中加入开发板包地址: https://dl.espressif.com/dl/package_esp32_index.json
-
-安装开发板软件包：Arduino IDE>开发板>开发板管理器>esp32>安装
 
 
 

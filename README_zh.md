@@ -1,5 +1,21 @@
 # HASSOS
 
+## Quick Start
+
+1. Install Hassos
+
+2. Configure
+2.1 Set a static IP address in Home Assistant OS
+2.2 Change DNS Server to google DNS
+
+3. Install HACS
+
+4. Install Add on
+
+
+
+
+
 ## Docker配置系列
 
 ~~~

@@ -35,17 +35,31 @@ output
 在 Music Assistant 中未找到结果。
 
 ## Add-on - 常见问题
-为什么我的add ons里面没多少插件可以安装,少一半
 
-我的没有official add-ons，只有Home Assistant Community Add-ons
+### 故障表现
+我的add ons里面没多少插件可以安装,少一半
+
+没有official add-ons，只有Home Assistant Community Add-ons
 
 vm安装的os 只有社区仓库，官方仓库不显示，添加了官方仓库显示已存在
 
-解决办法
+### 原因分析
+
+
+### 解决办法
 
 添加home assistant community add ons 源。需要网络环境
 
-启动高级模式
+Step 1.启动高级模式
+
+step 2.change DNS settings in hassOS
+~~~
+google dns：8.8.8.8
+~~~
+
+detail:http://localhost:4999/boards/topic/16771/add-ons-add-on#57814
+
+
 
 
 ## 关于版本

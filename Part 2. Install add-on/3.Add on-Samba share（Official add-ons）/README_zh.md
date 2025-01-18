@@ -1,3 +1,5 @@
+## Install Add on-Samba share（Official add-ons）
+
 Add on-samba进入HA配置目录
 https://www.home-assistant.io/common-tasks/os/# 
 

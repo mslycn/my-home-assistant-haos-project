@@ -50,8 +50,11 @@ https://blog.csdn.net/gongchenyu/article/details/134675480
 DNS records for huggingface.co
 https://www.nslookup.io/domains/huggingface.co/dns-records/#authoritative
 
+ha network info 
+
+output
 ~~~
-ha network info                     
+                    
 docker:
   address: 172.30.32.0/23
   dns: 172.30.32.3

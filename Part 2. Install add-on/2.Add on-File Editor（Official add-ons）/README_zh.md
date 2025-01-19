@@ -1,4 +1,9 @@
 ssh - 1.Add on-Terminal & SSH
+
+Official add-ons
+
+image source:https://registry-1.docker.io/v2/
+
 终端太难受了，而且是残废版，所以需要装个 ssh 插件
 
 ## installing

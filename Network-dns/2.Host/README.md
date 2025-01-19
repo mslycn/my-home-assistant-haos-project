@@ -94,6 +94,28 @@ PING github.com (140.82.114.4) 56(84) bytes of data.
 
 ~~~
 
+~~~
+一般文件位于： /etc/network/interfaces 或 /etc/sysconfig/network-scripts/ifcfg-<interface>（interface是你的网络接口，如eth0）。
+
+sudo nano /etc/network/interfaces
+
+添加DNS服务器： 在配置文件中，找到关于 DNS 的行，通常是类似于下面的形式：
+
+dns-nameservers <DNS_IP_1> <DNS_IP_2>
+
+将 <DNS_IP_1> 和 <DNS_IP_2> 替换为你想要使用的 DNS 服务器的实际 IP 地址。例如，使用 Google 的 DNS 服务器：
+
+dns-nameservers 8.8.8.8 8.8.4.4
+
+然后我们再保存并退出。
+
+sudo service networking restart # Ubuntu/Debian
+或
+sudo systemctl restart network # CentOS
+
+
+重启后生效。
+~~~
 
 ## 刷新DNS缓存
 
@@ -106,8 +128,18 @@ sudo service networking restart
 
 ## windows 10
 
+To change DNS Server in windows 10, follow these steps:
+~~~
+Tap Settings
+Choose Network & Internet
+Tap Advanced
+Tap Private DNS
+Tap Private DNS provider hostname
+Fill in the desired hostname
+Tap Save
+~~~
 
-修改windows缩主机的DNS
+修改windows缩主机的DNS server
 
 修改本机的DNS
 修改本机DNS只是影响本机的域名解析服务器，而不影响局域网中其它主机的DNS。

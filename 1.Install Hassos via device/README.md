@@ -1,5 +1,26 @@
 
-Home Assistant versions data
+
+List of Hardware devices are supported by HassOS
+https://github.com/home-assistant/operating-system/blob/dev/Documentation/boards/README.md
+
+Latest kernel of HassOS
+https://github.com/home-assistant/operating-system/blob/dev/Documentation/kernel.md
+
+
+
+Manual Network Configuration in HassOS
+https://github.com/home-assistant/operating-system/blob/dev/Documentation/network.md
+
+
+use an USB drive  to configure network options, install updates 
+https://github.com/home-assistant/operating-system/blob/dev/Documentation/configuration.md
+
+Raspberry Pi /dev
+https://bbs.hassbian.com/thread-26549-1-1.html
+
+
+
+Latest Home Assistant OS versions data
 
 https://github.com/home-assistant/version/blob/master/stable.json
 
@@ -61,3 +82,7 @@ hassos ota
 ~~~
 "ota": "https://os-artifacts.home-assistant.io/{version}/{os_name}_{board}-{version}.raucb",
 ~~~
+
+
+Home Assistant OS虚拟机版
+

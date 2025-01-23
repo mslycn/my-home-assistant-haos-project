@@ -27,7 +27,21 @@ step 1.disable static ip address
 step 2.set bridged network
 
 
-## Install Debian OS 
+
+
+## Quick Start
+~~~
+Install vmware palyer 17 on windows 10
+Install Debian 12 on vmware palyer 17
+Install Docker on Debian 12
+Install Docker home assistant on Debian 12
+~~~
+Home assistant docker on Windows 10 using Vmware player Guide
+https://blog.matterxiaomi.com/blog/windows10-vmware-home-assistant-docker-part1/
+
+
+
+## Install Debian OS on vmware palyer 17
 
 How To Install debian 12.1 using VMware Workstation palyer 17 on windows 10
 https://www.matterxiaomi.com/boards/topic/15713/how-to-install-debian-117-using-vmware-workstation-palyer-17-on-windows-10

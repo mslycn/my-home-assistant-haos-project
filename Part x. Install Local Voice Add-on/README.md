@@ -2,11 +2,10 @@
 Under the Official add-ons section, search and install the following add-ons:
 ~~~
 ESPHome
+
 Whisper
 Piper
 openWakeWord
-
-
 ~~~
 
 ## Voice Assistant Hardware
@@ -20,7 +19,12 @@ https://github.com/Djelle/ESPHomeVoiceSatellite/blob/main/esphome-voice-satellit
 
 Use OpenAI with Assist
 
+# Install method
+Install piper and whisper locally with Python virtual environment
 
+Install piper and whisper locally with Docker
+
+Install piper and whisper locally with Add on
 
 
 ## Project

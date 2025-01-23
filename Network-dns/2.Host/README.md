@@ -68,7 +68,20 @@ hosts文件包含了ip地址和主机名之间的映射，包括主机名的别�
 
 优先级：dns缓存>hosts>dns服务
 
+before
+~~~
+ping github.com
+PING github.com (20.205.243.166) 56(84) bytes of data.
+~~~
 
+after
+
+~~~
+ping github.com
+PING github.com (140.82.114.4) 56(84) bytes of data.
+64 bytes from github.com (140.82.114.4): icmp_seq=1 ttl=44 time=232 ms
+64 bytes from github.com (140.82.114.4): icmp_seq=2 ttl=44 time=231 ms
+~~~
 
 
 

@@ -1,4 +1,5 @@
 
+## Latest Data information of HassOS
 
 List of Hardware devices are supported by HassOS
 https://github.com/home-assistant/operating-system/blob/dev/Documentation/boards/README.md
@@ -6,11 +7,17 @@ https://github.com/home-assistant/operating-system/blob/dev/Documentation/boards
 Latest kernel of HassOS
 https://github.com/home-assistant/operating-system/blob/dev/Documentation/kernel.md
 
+Latest Home Assistant OS versions data
+https://github.com/home-assistant/version/blob/master/stable.json
+
+
 
 
 Manual Network Configuration in HassOS
 https://github.com/home-assistant/operating-system/blob/dev/Documentation/network.md
 
+
+## HassOS Debug
 
 use an USB drive  to configure network options, install updates 
 https://github.com/home-assistant/operating-system/blob/dev/Documentation/configuration.md
@@ -82,6 +89,12 @@ hassos ota
 ~~~
 "ota": "https://os-artifacts.home-assistant.io/{version}/{os_name}_{board}-{version}.raucb",
 ~~~
+
+Home Assistant offers four different installation methods.
+
+We recommend using the following  method:
+
+Home Assistant Operating System
 
 
 Home Assistant OS虚拟机版

@@ -1,0 +1,1 @@
+Install openwakeword and start it, as the defaults seem to work fine.

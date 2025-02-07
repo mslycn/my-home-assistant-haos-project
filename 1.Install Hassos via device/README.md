@@ -10,6 +10,8 @@ https://github.com/home-assistant/operating-system/blob/dev/Documentation/kernel
 Latest Home Assistant OS versions data
 https://github.com/home-assistant/version/blob/master/stable.json
 
+## Check HassOS Version & Platform Support
+
 
 
 

@@ -1,3 +1,18 @@
+## Problem
+
+在ha主机里运行的docker吗？这个docker镜像的功能是什么？ha主机用的是什么设备？拾音设备是什么，声音输出用的是什么方式？具体是怎么把他们配置到一起的？
+
+## hardware
+
+1、esp32 with mic and speaker
+
+2、homeassistant
+
+3、Whisper服务器
+
+4、。
+
+
 ## Voice Assistant Sofware
 Under the Official add-ons section, search and install the following add-ons:
 ~~~
@@ -27,6 +42,8 @@ Install piper and whisper locally with Python virtual environment
 Install piper and whisper locally with Docker
 
 Install piper and whisper locally with Add on
+
+Install piper from source code
 
 
 ## Project
@@ -114,3 +131,8 @@ It should display a default sentence or two for testing purposes and have a lang
 Now comes the best part: creating the voice pipeline itself. Go to Settings, Voice assistants and click the button to create a new voice assistant, or you can edit the default one; either option will work.
 
 Name the new voice assistant; I named mine “Local Voice”… Then select the Home Assistant Conversation Agent. For Speech to Text, select “faster-whisper”. For Text to Speech, select piper, your language, and the voice you set up for the piper add-on. For wake word engine, select “openwakeword”, then one of the default options. Then save the Voice Assistant.
+
+
+HomeAssistant 语音助手对接AI大模型相关系列教程说明
+
+https://bbs.iobroker.cn/t/topic/19137

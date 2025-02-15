@@ -1,6 +1,6 @@
 home-assistant-cli
 
-
+How to set static ip address via nmcli 
 
 Steps:
  - Go to the ha > login Panel.

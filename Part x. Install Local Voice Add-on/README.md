@@ -46,6 +46,19 @@ Install piper and whisper locally with Add on
 Install piper from source code
 
 
+- Install piper from source code
+~~~
+git clone https://github.com/rhasspy/wyoming-piper.git
+cd wyoming-piper
+script/setup
+
+script/run --piper '/usr/share/piper/piper' --voice en_US-lessac-medium --uri 'tcp://0.0.0.0:10200' --data-dir /data --download-dir /data 
+~~~
+https://github.com/rhasspy/wyoming-piper?tab=readme-ov-file#local-install
+
+https://blog.matterxiaomi.com/blog/local-voice-in-python-virtual-environment-part1/
+
+
 ## Project
 
 - ESP32-S3-Box3B Ready-Made Project

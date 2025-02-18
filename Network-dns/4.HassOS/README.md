@@ -19,7 +19,7 @@ ff02::2		ip6-allrouters
 140.82.114.4 github.com
 ~~~
 
-Otherwise:
+Otherwise you will get:
 
 ping github.com
 

@@ -24,7 +24,7 @@ Environment="HTTPS_PROXY=http://proxy.example.com:8080/"
 Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
 ~~~
 
-## Container 代理 - docker run 时的代理设置
+## Container代理 - docker run 时的代理设置
 
 在容器运行阶段，如果需要代理上网，则需要配置 ~/.docker/config.json。以下配置，只在Docker 17.07及以上版本生效。
 

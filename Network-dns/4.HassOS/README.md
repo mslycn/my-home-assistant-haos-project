@@ -4,7 +4,7 @@ ha>network info
 
 set hassos dns to 8.8.8.8
 
-# cat 
+# vi /etc/hosts
 
 ~~~
 

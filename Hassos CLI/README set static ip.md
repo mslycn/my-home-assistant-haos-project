@@ -30,6 +30,19 @@ nmcli con show "Your Connection Name" 列出该连接的当前属性,如果知�
 
 nmcli con edit "Your Connection Name"进入该连接的编辑模式，此时屏幕显示一段提示语句外，命令行显示如下
 
+NAME             UUID                                  TYPE      DEVICE          
+br-d23727c3fc1f  47f2224e-b06c-41d9-9719-4c0aee799866  bridge    br-d23727c3fc1f 
+lo               f2d9ddd2-9646-46fd-8024-e05533b07d32  loopback  lo              
+docker0          4face605-a1dc-4f72-861c-b2a0bf07c991  bridge    docker0
+
+nmcli connection modify <interface_name> ipv4.address  <ip/prefix>
+
+nmcli connection modify br-d23727c3fc1f ipv4.address  192.168.2.126/24
+
+
+
+nmcli con up br-d23727c3fc1f 
+
 nmcli>
 
 print ipv4将向您显示该连接的 IPv4 属性

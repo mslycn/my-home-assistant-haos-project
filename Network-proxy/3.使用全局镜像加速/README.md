@@ -1,5 +1,14 @@
 README-use a registry-mirrors
 
+分2种情况使用加速器
+
+- docker 使用加速器
+
+- containerd 使用加速器
+
+https://www.cnblogs.com/jingjingxyk/p/16574995.html
+
+
 配置镜像加速器
 
 Docker镜像加速主要是通过使用国内的Docker Registry服务器来实现的.
@@ -10,7 +19,7 @@ Docker镜像加速主要是通过使用国内的Docker Registry服务器来实�
 
 ### aliyun镜像源
 
-获取aliyun镜像源
+1. 获取aliyun镜像源
 
 menu path：容器镜像服务/镜像加速器
 https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
@@ -25,7 +34,7 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 EOF
 ~~~
 
-Next, restart your Docker daemon by running:
+2. Next, restart your Docker daemon by running:
 
 通过修改 dockerd 配置文件，并重载，可以在服务器上开启 dockerd 的属性
 
@@ -33,6 +42,7 @@ Next, restart your Docker daemon by running:
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ~~~
+
 
 ### nju镜像源
 

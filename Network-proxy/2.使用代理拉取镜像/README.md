@@ -1,35 +1,65 @@
 Configure Docker to use a proxy server
 
-镜像的拉取和管理都是 docker daemon 的职责，所以我们要让 docker daemon 知道代理服务器的存在。而 docker daemon 是由 systemd 管理的，所以我们要从 systemd 配置入手。
+代理服务器的问题也可能存在。如果用户处于需要代理的网络环境中，而Home Assistant没有正确配置代理，那么无法连接到外部服务器。这时候需要检查Home Assistant的代理设置，或者在Docker环境中配置代理变量。
+
+1. 首先， docker pull / docker push 和 docker build/docker run 使用代理的方式不一样
+
+
+原文链接：https://neucrack.com/p/286
+
+
+
+
+2. 给Docker服务配置代理
+
+镜像的拉取pull和管理都是 docker daemon 的职责，所以我们要让 docker daemon 知道代理服务器的存在。而 docker daemon 是由 systemd 管理的，所以我们要从 systemd 配置入手。
 
 source:https://www.cnblogs.com/abc1069/p/17496240.html
 
-## Dockerd代理 - docker pull的正确代理设置
+2. Dockerd代理 - docker pull的正确代理设置
 
-docker daemon 使用 HTTP_PROXY, HTTPS_PROXY, 和 NO_PROXY 三个环境变量配置代理服务器，但是你需要在 systemd 的文件里配置环境变量，而不能配置在 daemon.json 里。
-
-在执行docker pull时，是由守护进程dockerd来执行。因此，代理需要配在dockerd的环境中。而这个环境，则是受systemd所管控，因此实际是systemd的配置
+docker pull /push 的代理被 systemd 接管，所以需要设置 systemd
 
 ~~~
 sudo mkdir -p /etc/systemd/system/docker.service.d
 sudo touch /etc/systemd/system/docker.service.d/proxy.conf
-
-
 ~~~
 
+
+docker daemon 使用 HTTP_PROXY, HTTPS_PROXY, 和 NO_PROXY 三个环境变量配置代理服务器，但是你需要在 systemd 的文件里配置环境变量，而不能配置在 daemon.json 里。
+
+在执行docker pull时，是由守护进程dockerd来执行。因此，代理需要配在dockerd的环境中。而这个环境，则是受systemd所管控，因此实际是systemd的配置
 ~~~
 [Service]
 Environment="HTTP_PROXY=http://proxy.example.com:8080/"
 Environment="HTTPS_PROXY=http://proxy.example.com:8080/"
 Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
 ~~~
+这里的127.0.0.1是直接用了本机的 http 代理，然后重启服务才能生效
+~~~
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+~~~
 
-## Container代理 - docker run 时的代理设置
+可以通过sudo systemctl show --property=Environment docker看到设置的环境变量。
+
+然后docker pull就会使用代理啦！
+
+这里 HTTP 代理可以通过你的代理软件开出来，如果你的代理软件只能开出来 socks5 代理的话，你可以用 polipo 开一个 http 代理使用
+
+
+3. Container代理 - docker run 时的代理设置 - 设置 docker 全局代理
+
+这种设置方法只对 build 和 run 有用
+
 
 在容器运行阶段，如果需要代理上网，则需要配置 ~/.docker/config.json。以下配置，只在Docker 17.07及以上版本生效。
 
 Configure the Docker client
 You can add proxy configurations for the Docker client using a JSON configuration file, located in ~/.docker/config.json. Builds and containers use the configuration specified in this file.
+
+vim ~/.docker/config.json
+
 ~~~
 {
  "proxies": {
@@ -41,6 +71,21 @@ You can add proxy configurations for the Docker client using a JSON configuratio
  }
 }
 ~~~
+
+注意:
+
+仅支持 http https ftp 协议，不支持 socks5 协议（2022.3.24，未来不一定，官方文档为准），可以使用polipo创建一个http代理服务，参考https://neucrack.com/p/275
+
+这里使用了172.17.0.1(docker 虚拟网卡地址), 而不是127.0.0.1, 这是因为这是从容器内部的角度来看的, 容器内部要使用代理,默认情况下只能访问这个虚拟网卡的地址, 127.0.0.1是容器内部, 如果代理在宿主机, 要使用 虚拟网卡的地址才能访问到.
+
+这个文件一旦存在, docker就会使用这里面的代理, 包括创建的容器都会使用它。 所以不需要代理了, 需要关闭代理, 就是把文件重命名一下就好了, 这点用起来确实挺麻烦，也许未来会优化体验吧。
+
+注意， 一个容器一旦生成， 这些环境变量（http_proxy https_proxy ftp_proxy no_proxy）就会被继承到容器中， 就算把config.json删除， 这个容器依然使用创建时的环境变量，可以手动在容器内重新设置这些环境变量， 这点也挺容易让人头疼的， 一定要注意。
+
+https://docs.docker.com/network/proxy/
+
+
+
 
 ## Docker Build 代理
 

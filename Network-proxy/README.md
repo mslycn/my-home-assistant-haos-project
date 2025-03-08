@@ -1,4 +1,18 @@
+成功安装Home Assistant的Add-On时遇到网络错误的问题 - 网络连接问题
 
+Home Assistant Supervisor本身管理Add-ons的方式是通过配置文件指定镜像和仓库地址。
+
+检查DNS和网络连通性。
+
+配置Docker镜像加速器。
+
+设置代理（如有需要）。
+
+调整防火墙规则。
+
+检查日志
+
+确认Home Assistant Addon的正确安装流程。
 
 
 ## Docker hub && docker github  && Huggingface space

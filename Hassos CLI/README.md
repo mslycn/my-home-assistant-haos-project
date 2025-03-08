@@ -1,6 +1,6 @@
 home-assistant-cli
 
-
+ha> ha --help
 ~~~
   addons         Install, update, remove and configure Home Assistant add-ons
   audio          Audio device handling.
@@ -22,7 +22,12 @@ home-assistant-cli
   supervisor     Monitor, control and configure the Home Assistant Supervisor
 
 ~~~
-supervisor logs
+
+- 检查日志文件
+
+ha> ha supervisor logs
+
+ha> ha supervisor logs -f
 
 
 docker ps

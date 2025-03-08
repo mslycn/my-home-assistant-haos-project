@@ -180,5 +180,14 @@ useful links
 
 https://www.cnblogs.com/leiblog/p/10716959.html
 
+github github520 project
+
+github520项目每天会更新hosts内容，在项目页面，可以直接找到hosts内容，拷贝进系统的hosts文件即可。不同系统的hosts文件位置不同:
+Windows下hosts文件位置为%systemroot%\Windows\System32\drivers\etc\hosts
+
+Linux下则位于/etc/hosts
+
+https://github.com/521xueweihan/GitHub520
+
 
 

@@ -24,3 +24,7 @@ docker load -i <image-name>.tar
 4：查看镜像
 
 docker images
+
+Useful links
+
+https://www.iaspnetcore.com/Blog/BlogPost/66f3363e3e98ac0270269578/docker-copy-instruction

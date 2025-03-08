@@ -19,3 +19,6 @@ VMNet8
 Use Reliable DNS Providers: Stick to well-known DNS providers like Google DNS (8.8.8.8) or Cloudflare (1.1.1.1)
 
 Restart Your Computer: After changing the DNS settings, restart your computer to ensure the changes take full effect.
+
+
+

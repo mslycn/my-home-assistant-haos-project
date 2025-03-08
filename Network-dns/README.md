@@ -1,3 +1,5 @@
+成功安装Home Assistant的Add-On时遇到网络错误的问题 - dns
+
 
 ##  系统级别
 
@@ -37,7 +39,6 @@ DNS就是将域名映射成ip的分布式数据库服务器，它的作用如下
 
 　　8.8.8.8是GOOGLE公司提供的DNS，该地址是全球通用的，相对来说，更适合国外以及访问国外网站的用户使用。
 
-
 ~~~
 router的DNS->缩主机的DNS /etc/resolv.conf -> 全部容器的 DNS 可以在/etc/docker/daemon.json -> 容器内的/etc/resolv.conf改动(不再关联缩主机的/etc/resolv.conf)
 ~~~
@@ -74,7 +75,7 @@ https://blog.csdn.net/gongchenyu/article/details/134675480
 DNS records for huggingface.co
 https://www.nslookup.io/domains/huggingface.co/dns-records/#authoritative
 
-ha network info 
+ha> ha network info 
 
 output
 ~~~
@@ -119,3 +120,9 @@ supervisor_internet: true
 
 
 ~~~
+
+
+esphome addon
+
+Tool Manager: Error: Please read https://bit.ly/package-manager-ioerror
+ERROR Error: Please read https://bit.ly/package-manager-ioerror

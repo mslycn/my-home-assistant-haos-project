@@ -1,5 +1,12 @@
 README-use a registry-mirrors
 
+
+
+原文链接：https://neucrack.com/p/286
+
+
+
+
 分2种情况使用加速器
 
 - docker 使用加速器
@@ -9,13 +16,23 @@ README-use a registry-mirrors
 https://www.cnblogs.com/jingjingxyk/p/16574995.html
 
 
-配置镜像加速器
+## 配置镜像加速器
+
+在 Docker 中，可以修改daemon.json来修改镜像仓库.
 
 Docker镜像加速主要是通过使用国内的Docker Registry服务器来实现的.
 
 针对Docker客户端版本大于 1.10.0 的用户
 
-可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器
+可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器.
+
+sudo vim /etc/docker/daemon.json
+
+~~~
+{
+  "registry-mirrors": ["https://ghcr.nju.edu.cn"]
+}
+~~~
 
 ### aliyun镜像源
 

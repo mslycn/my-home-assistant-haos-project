@@ -1,5 +1,7 @@
 Configure Docker to use a proxy server
 
+使用代理解决Docker拉取镜像失败问题
+
 代理服务器的问题也可能存在。如果用户处于需要代理的网络环境中，而Home Assistant没有正确配置代理，那么无法连接到外部服务器。这时候需要检查Home Assistant的代理设置，或者在Docker环境中配置代理变量。
 
 1. 首先， docker pull / docker push 和 docker build/docker run 使用代理的方式不一样
@@ -16,9 +18,20 @@ Configure Docker to use a proxy server
 
 source:https://www.cnblogs.com/abc1069/p/17496240.html
 
-2. Dockerd代理 - docker pull的正确代理设置
+3. Dockerd代理 - docker pull的正确代理设置
 
 docker pull /push 的代理被 systemd 接管，所以需要设置 systemd
+
+- 找到 Docker service 的文件，直接在 [Service] 模块下加入代理配置
+~~~
+# 通过 systemctl status 可以看到 Service 文件目录 
+$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+
+$ sduo vi /usr/lib/systemd/system/docker.service
+~~~
+
 
 ~~~
 sudo mkdir -p /etc/systemd/system/docker.service.d
@@ -29,6 +42,10 @@ sudo touch /etc/systemd/system/docker.service.d/proxy.conf
 docker daemon 使用 HTTP_PROXY, HTTPS_PROXY, 和 NO_PROXY 三个环境变量配置代理服务器，但是你需要在 systemd 的文件里配置环境变量，而不能配置在 daemon.json 里。
 
 在执行docker pull时，是由守护进程dockerd来执行。因此，代理需要配在dockerd的环境中。而这个环境，则是受systemd所管控，因此实际是systemd的配置
+
+
+
+
 ~~~
 [Service]
 Environment="HTTP_PROXY=http://proxy.example.com:8080/"
@@ -43,7 +60,7 @@ sudo systemctl restart docker
 
 可以通过sudo systemctl show --property=Environment docker看到设置的环境变量。
 
-然后docker pull就会使用代理啦！
+然后docker pull就会使用代理.
 
 这里 HTTP 代理可以通过你的代理软件开出来，如果你的代理软件只能开出来 socks5 代理的话，你可以用 polipo 开一个 http 代理使用
 
@@ -100,6 +117,6 @@ https://docs.docker.com/network/proxy/
 
 
 
-
+原文链接：https://blog.csdn.net/weixin_74313592/article/details/145215879
 
 https://gitee.com/wanfeng789/docker-hub#%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F

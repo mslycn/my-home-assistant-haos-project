@@ -78,3 +78,7 @@ set ..... 也可继续修改其他参数
 
 save 保存
 
+
+
+The things that really consume resources are add-ons, particularly Studio Code Server.
+

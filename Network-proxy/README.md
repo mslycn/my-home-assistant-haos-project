@@ -1,3 +1,18 @@
+目前常用的 Docker Registry 公开服务有：
+~~~
+docker.io ：Docker Hub 官方镜像仓库，也是 Docker 默认的仓库
+gcr.io、k8s.gcr.io ：谷歌镜像仓库
+quay.io ：Red Hat 镜像仓库
+ghcr.io ：GitHub 镜像仓库
+~~~
+
+当使用 docker pull 仓库地址/用户名/仓库名:标签 时，会前往对应的仓库地址拉取镜像，标签无声明时默认为 latest， 仓库地址无声明时默认为 docker.io 。
+
+
+
+
+
+
 成功安装Home Assistant的Add-On时遇到网络错误的问题 - 网络连接问题
 
 Home Assistant Supervisor本身管理Add-ons的方式是通过配置文件指定镜像和仓库地址。

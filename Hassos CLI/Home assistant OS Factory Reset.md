@@ -1,0 +1,3 @@
+In Home Assistant Operating System, the `ha os datadisk wipe` command wipes the data disk. The command deletes all user data as well as Home Assistant Core, Supervisor, and any installed add-ons.
+
+The command `ha os datadisk wipe` marks the data partition (either internal on the eMMC or the SD card, or on an external attached data disk) as to be cleared on the next reboot. The command automatically reboots the system. Upon reboot, the data is cleared. Then the system continues to boot and reinstalls the latest version of all Home Assistant components.

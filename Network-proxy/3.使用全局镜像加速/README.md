@@ -1,6 +1,13 @@
+
 README-use a registry-mirrors
 
+## Docker镜像加速原理
+Docker镜像加速主要是通过使用国内的Docker Registry服务器来实现的。这些服务器可以更快地响应请求，从而提高镜像拉取的速度。常见的国内镜像加速器包括阿里云、腾讯云、网易等。
 
+
+若我们使用一台魔法机器从 gcr.io 或 quay.io 等仓库先把我们无法下载的镜像拉取下来，然后重新上传到 docker.io ，是不是就可以使用 Docker Hub 的镜像加速器来下载了
+
+镜像加速
 
 原文链接：https://neucrack.com/p/286
 

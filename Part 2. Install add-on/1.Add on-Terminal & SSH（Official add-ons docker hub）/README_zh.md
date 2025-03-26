@@ -1,0 +1,1 @@
+Home Assistant Community Add-on: Advanced SSH & Web Terminal

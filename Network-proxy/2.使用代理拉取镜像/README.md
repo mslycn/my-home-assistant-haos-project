@@ -2,6 +2,8 @@ Configure Docker to use a proxy server
 
 使用代理解决Docker拉取镜像失败问题
 
+在Linux环境下，可以通过编辑Docker配置文件来设置代理。
+
 代理服务器的问题也可能存在。如果用户处于需要代理的网络环境中，而Home Assistant没有正确配置代理，那么无法连接到外部服务器。这时候需要检查Home Assistant的代理设置，或者在Docker环境中配置代理变量。
 
 1. 首先， docker pull / docker push 和 docker build/docker run 使用代理的方式不一样
@@ -44,8 +46,12 @@ docker daemon 使用 HTTP_PROXY, HTTPS_PROXY, 和 NO_PROXY 三个环境变量配
 在执行docker pull时，是由守护进程dockerd来执行。因此，代理需要配在dockerd的环境中。而这个环境，则是受systemd所管控，因此实际是systemd的配置
 
 
+## 设置Docker使用代理
 
+1. 编辑Docker配置文件
+sudo nano /etc/systemd/system/docker.service.d/http-proxy.conf
 
+2. 添加以下内容：
 ~~~
 [Service]
 Environment="HTTP_PROXY=http://proxy.example.com:8080/"
@@ -53,6 +59,8 @@ Environment="HTTPS_PROXY=http://proxy.example.com:8080/"
 Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
 ~~~
 这里的127.0.0.1是直接用了本机的 http 代理，然后重启服务才能生效
+
+3. 重载Systemd管理器配置并重启Docker服务
 ~~~
 sudo systemctl daemon-reload
 sudo systemctl restart docker

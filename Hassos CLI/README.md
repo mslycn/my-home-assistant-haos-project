@@ -29,6 +29,11 @@ ha> ha supervisor logs
 
 ha> ha supervisor logs -f
 
+output
+~~~
+
+~~~
+
 
 docker ps
 ~~~

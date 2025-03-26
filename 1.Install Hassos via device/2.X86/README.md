@@ -1,3 +1,5 @@
+My HA is running on a dedicated NUC and I love it. It’s fast, it’s reliable and you can store a lot of info on it.
+
 My only advice is
 
 RAM is the cheapest mistake you can make in a box. Especially of you can’t change it later. Go big or go home.

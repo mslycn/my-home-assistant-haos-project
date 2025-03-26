@@ -25,6 +25,16 @@ docker load -i <image-name>.tar
 
 docker images
 
+##  https://registry-1.docker.io
+
+Can't install homeassistant/amd64-addon-speech-to-phrase:1.3.0: 500 Server Error for http+docker://localhost/v1.47/images/create?tag=1.3.0&fromImage=homeassistant%2Famd64-addon-speech-to-phrase&platform=linux%2Famd64: Internal Server Error ("Get "https://registry-1.docker.io/v2/": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)")
+
+docker pull homeassistant/amd64-addon-speech-to-phrase:1.3.0
+
+docker load -i <image-name>.tar
+
+
+hugggingface.co无法访问
 Useful links
 
 https://www.iaspnetcore.com/Blog/BlogPost/66f3363e3e98ac0270269578/docker-copy-instruction

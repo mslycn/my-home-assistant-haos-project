@@ -282,3 +282,100 @@ used in this list are for identification purposes only.
 
 Use of these names, logos, trademarks, and brands does not imply endorsement.
 
+
+
+
+
+real world
+
+## Add-ons and Integrations
+- Add-ons Installed:
+~~~
+File editor (5.8.0), 
+Duck DNS (1.18.0), 
+Terminal & SSH (9.16.0), 
+ESPHome Device Builder (2024.12.2), 
+Mosquitto broker (6.4.1), 
+Node-RED (19.0.0), 
+Home Assistant Google Drive Backup (0.112.1), 
+AppDaemon (0.16.7), 
+Studio Code Server (5.18.0), 
+WireGuard (0.10.2), 
+AirCast (4.2.3), 
+openWakeWord (1.10.0), 
+Zigbee2MQTT (2.0.0-2), 
+Samba share (12.3.2), 
+Tailscale (0.24.0), 
+Everything Presence Zone Configurator (1.1.1), 
+Whisper (2.4.0), 
+Piper (1.5.2),
+Glances (0.21.1)
+~~~
+
+- Integrations Enabled:
+* adaptive_lighting
+* alexa_media
+* bluetooth
+* cloud
+* dlna_dms
+* ecovacs
+* esphome
+* flux_led
+* google_assistant_sdk
+* google_home
+* group
+* homekit
+* homekit_controller
+* iss
+* lifx
+* localtuya
+* min_max
+* mobile_app
+* moon
+* mqtt
+* powercalc
+* scheduler
+* shopping_list
+* sun
+* systemmonitor
+* template
+* thermal_comfort
+* tplink_router
+* tuya
+* utility_meter
+* xiaomi_ble
+* zha
+* anniversaries
+* ble_monitor
+* blitzortung
+* bthome
+* co2signal
+* dnsip
+* foldingathomecontrol
+* fully_kiosk
+* generic_hygrostat
+* generic_thermostat
+* go2rtc
+* hacs
+* hildebrandglow_dcc
+* hyperion
+* ibeacon
+* octoprint
+* octopus_energy
+* openplantbook
+* oralb
+* private_ble_device
+* samsung_soundbar
+* smartlife
+* switchbot
+* wyoming
+* group
+* min_max
+* template
+* utility_meter
+* hassio
+* scheduler
+* plant
+* template
+* thermal_comfort
+* tplink_router

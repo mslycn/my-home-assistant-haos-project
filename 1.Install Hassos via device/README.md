@@ -101,3 +101,8 @@ Home Assistant Operating System
 
 Home Assistant OS虚拟机版
 
+
+
+最新 Home Assistant OS 针对树莓派平台已经预装了 Matter 和 Thread.
+
+

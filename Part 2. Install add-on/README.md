@@ -16,7 +16,7 @@ Hassos  通过 package_xxx_index.json 文件管理Addon 版本。在 github 官�
 
 
 # Add-ons
-先解决Add-ons按照源是否正常的问题。由3部分组成：官方、社区、（官方+社区）都没有的Add-on
+先解决Add-ons按照源是否正常的问题。由3部分组成：官方、社区、（官方+社区）都没有的第3方 Add-on
 
 Official Add-ons
 ...
@@ -24,8 +24,12 @@ Community Add-ons
 ...
 Third Party Add-ons ->Add-ons Repositories
 ....
+
 search esphome
+
 output
+
+~~~
 在 Official add-ons 中未找到结果。
 在 Home Assistant Community Add-ons 中未找到结果。
 
@@ -33,6 +37,7 @@ output
 在 HassOS Configurator 中未找到结果。
 在 Matterbridge 中未找到结果。
 在 Music Assistant 中未找到结果。
+~~~
 
 ## Add-on - 常见问题
 
@@ -43,6 +48,17 @@ output
 
 vm安装的os 只有社区仓库，官方仓库不显示，添加了官方仓库显示已存在
 
+search "PiCorePlayer" Add-on
+output
+~~~
+在 Official add-ons 中未找到结果。
+
+在 ESPHome 中未找到结果。
+
+在 Home Assistant Community Add-ons 中未找到结果。
+
+在 Music Assistant 中未找到结果。
+~~~
 ### 原因分析
 
 

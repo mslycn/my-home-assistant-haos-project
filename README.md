@@ -122,12 +122,14 @@ provide the Supervisor, which is capable of running and manage these add-ons._
 
 _Created and maintained by the Home Assistant team._
 
+### Community Add-ons
+
 
 ### Third Party Add-ons
 
 _Anyone can create an add-on, the following are created by the community._
 
-
+- [Home assistant add-on: alexbelgium](https://github.com/alexbelgium/hassio-addons) The primary goal of this project is to provide you  with additional add-ons
 
 ## Dashboards
 
@@ -229,6 +231,8 @@ _Keep up with the latest news and updates, 280 characters at a time!_
 ## Uncategorized
 
 _Valuable links, that don't fit in any of the above categories (yet!)._
+
+
 
 
 ## Alternative Home Automation Software

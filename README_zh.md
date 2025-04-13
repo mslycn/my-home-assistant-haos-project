@@ -49,3 +49,6 @@ services:
       - ./ha_config:/config
 
 ~~~
+
+
+The command ‘ha’ is in the hassio_cli container

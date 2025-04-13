@@ -3,7 +3,7 @@
 
 Home Assistant Connect ZBT-1
 
-
+step 1.The OpenThread Border Router add-on flashes the Thread firmware on startup.
 Install Home Assistant Add-on: OpenThread Border Router Add-on
 
 This requires a supported 802.15.4 capable radio with OpenThread RCP firmware. Home Assistant Connect ZBT-1

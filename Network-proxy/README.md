@@ -185,3 +185,9 @@ https://hafuhafu.com/archives/install-home-assistant-os-on-esxi/
 
 ## other
 
+ pulling the target missing image manualy:
+
+I physically connected a monitor/keyboard to my HAOS setup, ran the login command from the ha cli, then ran a docker pull {{missing_image_name:tag}} command. After that, I was able to start the add-on from the Home Assistant web UI again.
+
+
+docker pull homeassistant/aarch64-addon-letsencrypt:5.0.15

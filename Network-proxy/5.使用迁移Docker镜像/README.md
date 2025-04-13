@@ -1,7 +1,11 @@
 
 
-- 使用 docker pull 拉取特定架构amd64、arm64、aarch64的容器镜像
+1. 使用 docker pull 拉取特定架构amd64、arm64、aarch64的容器镜像
 docker pull --platform linux/arm64  homebridge/homebridge
+
+docker pull openthread/otbr:latest
+docker pull --platform linux/arm64 openthread/otbr:latest
+
 
 http://localhost:4999/boards/topic/40217
 
@@ -28,6 +32,8 @@ docker save -o  amd64-addon-speech-to-phrase.tar homeassistant/amd64-addon-speec
 
 docker save -o  amd64-addon-otbr.tar  homeassistant/amd64-addon-otbr:2.13.0
 
+docker save -o otbr.tar openthread/otbr:latest
+
 
 2：手动上传到另一个服务器
 
@@ -36,6 +42,8 @@ docker save -o  amd64-addon-otbr.tar  homeassistant/amd64-addon-otbr:2.13.0
 docker load < 镜像名.tar
 
 docker load -i <image-name>.tar
+
+docker load -i otbr.tar
 
 4：查看镜像
 

@@ -183,11 +183,19 @@ ENV{ID_FS_LABEL}="hassos-overlay", ACTION=="change", RUN+="/usr/bin/systemd-moun
 https://hafuhafu.com/archives/install-home-assistant-os-on-esxi/
 
 
-## other
+## How to use
 
- pulling the target missing image manualy:
+
+
+ - pulling the target missing image manualy:
 
 I physically connected a monitor/keyboard to my HAOS setup, ran the login command from the ha cli, then ran a docker pull {{missing_image_name:tag}} command. After that, I was able to start the add-on from the Home Assistant web UI again.
 
+可以在haos的ssh 终端里docke pull matterimage，看能成功不
+
 
 docker pull homeassistant/aarch64-addon-letsencrypt:5.0.15
+
+- 现在临时在其他机器docker pull，docker save；然后拷贝到haos里，执行docke load 导入image。然后在ha的web里进行matter 的配置（docker就会启动这个image）
+
+

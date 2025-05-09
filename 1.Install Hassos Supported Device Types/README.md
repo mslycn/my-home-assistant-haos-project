@@ -28,6 +28,7 @@ Raspberry Pi /dev
 https://bbs.hassbian.com/thread-26549-1-1.html
 
 
+## Supported Device Types
 
 Latest Home Assistant OS versions data
 

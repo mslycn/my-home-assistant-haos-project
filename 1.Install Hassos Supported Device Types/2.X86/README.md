@@ -13,5 +13,15 @@ RPi’s used to be cheap but that has changed and now new N100 systems are a goo
 For me one search on the forum for issues on pi5 answers that question VERY quickly. (lots of weird issues starting etc. I do not consider it a ‘tried and true platform’ compared to x64(X86) and HA is platform agnostic. Your backup will transfer.
 
 
-- Nuc Z3735F 小主机安装 Home Assistant
+- Nuc Z3735F 小主机安装 Home Assistant OS
 https://www.cnblogs.com/ban1234/p/18734245
+
+- Install Home Assistant OS on Intel NUC(install HA OS image)
+
+https://www.home-assistant.io/installation/generic-x86-64
+
+- Install Home Assistant OS using Proxmox  on Intel NUC
+Installing Home Assistant OS on a Virtual Machine using Proxmox on Intel NUC
+
+- Install Home Assistant Docker using Proxmox  on Intel NUC
+  Installing Home Assistant Docker on Debian

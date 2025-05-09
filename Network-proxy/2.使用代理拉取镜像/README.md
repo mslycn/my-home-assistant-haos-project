@@ -1,3 +1,7 @@
+## Note
+目前最新haos 13.1已经不能修改docker的配置，即不能添加代理。长远方法是使用透明代理
+
+
 Configure Docker to use a proxy server
 
 使用代理解决Docker拉取镜像失败问题

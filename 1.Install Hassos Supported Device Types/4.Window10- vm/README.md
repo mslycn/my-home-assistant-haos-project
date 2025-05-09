@@ -48,3 +48,6 @@ https://www.matterxiaomi.com/boards/topic/15713/how-to-install-debian-117-using-
 
 How To Install debian 12.9 using VMware Workstation palyer 17 on windows 10
 https://blog.matterxiaomi.com/blog/Install-debian12-VMware-Workstation-17-PRO-windows-10-part3/
+
+
+其实最开始我是先安装win10 ，再用VMware安装Debian虚拟机的，这里就需要处理很多衍生的问题，比如开机启动，内网映射等，而且据我的经验，VM虚拟机时间长了稳定性不太好。

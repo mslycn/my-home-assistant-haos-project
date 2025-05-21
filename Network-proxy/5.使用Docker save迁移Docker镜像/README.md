@@ -11,7 +11,7 @@ docker search --filter architecture=arm64 eclipse-mosquitto
 ~~~
 docker pull --platform linux/arm64  homebridge/homebridge
 
-docker pull --platform linux/arm64 linuxserver/kodi-headless failure
+docker pull --platform linux/arm64 linuxserver/kodi-headless (failure)
 
 docker pull --platform linux/arm64 linuxserver/code-server  
 
@@ -55,6 +55,8 @@ docker save -o eclipse-mosquitto.tar  eclipse-mosquitto arm64
 
 docker save -o python-matter-server.tar  ghcr.io/home-assistant-libs/python-matter-server arm64
 
+docker save -o linuxserver-code-server.tar linuxserver/code-server  arm64
+
 linuxserver/kodi-headless
 
 
@@ -75,6 +77,8 @@ docker load -i wyoming-vosk.tar  arm64
 docker load -i eclipse-mosquitto.tar  arm64
 
 docker load -i  python-matter-server.tar  
+
+docker load -i linuxserver-code-server.tar 
 
 ### Step 6.查看镜像
 

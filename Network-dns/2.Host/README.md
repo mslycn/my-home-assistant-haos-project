@@ -130,7 +130,7 @@ sudo systemctl restart network # CentOS
 重启后生效。
 ~~~
 
-## 刷新DNS缓存
+### 刷新DNS缓存
 
 debian12 刷新dns
 

@@ -1,8 +1,10 @@
+# Configure Docker to use a proxy server
+
 ## Note
 目前最新haos 13.1已经不能修改docker的配置，即不能添加代理。长远方法是使用透明代理
 
 
-Configure Docker to use a proxy server
+
 
 使用代理解决Docker拉取镜像失败问题
 
@@ -11,6 +13,12 @@ Configure Docker to use a proxy server
 代理服务器的问题也可能存在。如果用户处于需要代理的网络环境中，而Home Assistant没有正确配置代理，那么无法连接到外部服务器。这时候需要检查Home Assistant的代理设置，或者在Docker环境中配置代理变量。
 
 1. 首先， docker pull / docker push 和 docker build/docker run 使用代理的方式不一样
+
+docker pull /push 的代理被 systemd 接管，所以需要设置 systemd
+
+
+
+
 
 
 原文链接：https://neucrack.com/p/286
@@ -51,6 +59,32 @@ docker daemon 使用 HTTP_PROXY, HTTPS_PROXY, 和 NO_PROXY 三个环境变量配
 
 
 ## 设置Docker使用代理
+
+### Quick Start
+~~~
+$ sudo mkdir -p /etc/systemd/system/docker.service.d
+
+$ sudo vi /etc/systemd/system/docker.service.d/http-proxy.conf
+
+$ sudo systemctl daemon-reload
+
+$ sudo  systemctl restart docker
+
+
+$ docker pull docurdt/heal
+Using default tag: latest
+latest: Pulling from docurdt/heal
+~~~
+
+This is what I have in http-proxy.conf:
+~~~
+$ cat /etc/systemd/system/docker.service.d/http-proxy.conf
+[Service]
+Environment="HTTP_PROXY=http://webproxy.bu.edu:8900"
+Environment="HTTPS_PROXY="http://webproxy.bu.edu:8900"
+~~~
+
+### step by step
 
 1. 编辑Docker配置文件
 sudo nano /etc/systemd/system/docker.service.d/http-proxy.conf

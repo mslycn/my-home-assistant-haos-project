@@ -1,6 +1,6 @@
 # How to Change DNS Settings on Your OS(Debian 12)
 
-| Item    | Describe | Dir   | content |
+| Item    | Description | Dir   | content |
 | -------- | ------- | -------- | ------- |
 | domain <--> ip |     | cat /etc/hosts  |<pre><code> 127.0.0.1	localhost</code><br> <code>::1		localhost</code><br> <code>ip6-localhost ip6-loopback</code><br> <code>ff02::1		ip6-allnodes</code><br> <code>ff02::2	ip6-allrouters  </code></pre> |
 | host name |      | cat /etc/hostname | raspberrypi    |

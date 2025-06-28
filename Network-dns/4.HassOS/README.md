@@ -4,7 +4,39 @@ ha>network info
 
 set hassos dns to 8.8.8.8
 
-# vi /etc/hosts
+~~~
+ha dns info
+~~~
+
+output
+~~~
+ha dns info
+fallback: true
+host: 172.30.32.3
+llmnr: true
+locals:
+- dns://192.168.1.1
+- dns://192.168.2.1
+mdns: true
+servers: []
+update_available: false
+version: 2025.02.0
+version_latest: 2025.02.0
+
+~~~
+
+
+## How to change DNS setting in HassOS
+
+home assistant cli:
+~~~
+ha dns options --servers dns://IP_ADDRESS
+ha dns restart
+
+~~~
+
+
+## vi /etc/hosts
 
 ~~~
 
@@ -26,9 +58,6 @@ ping github.com
 ~~~
 No respone from github.com
 ~~~
-
-
-
 
 
 

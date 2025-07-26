@@ -1,5 +1,7 @@
 # debian 12  + docker rpi p5b
 
+Add enable_ipv6: true to all networks, if you didn’t define any networks.
+
 # systemctl status NetworkManager
 ~~~
 systemctl status NetworkManager
@@ -28,8 +30,11 @@ May 20 23:32:44 raspberrypi NetworkManager[666]: <info>  [1747755164.9582] dhcp6
 
 ## 网络配置
 
+检测有哪些网卡（物理网卡+虚拟网卡）
+
 docker network ls
 
+Hassos
 ~~~
 NETWORK ID     NAME      DRIVER    SCOPE
 012506a27536   bridge    bridge    local
@@ -60,6 +65,15 @@ sudo ip6tables -t nat -A POSTROUTING -s fd00::/64 -o eth0 -j MASQUERADE
 
 ~~~
 
+Enable IP forwarding
+~~~
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p /etc/sysctl.conf
+
+~~~
+
+
 ## mDNS配置
 ~~~
 # 安装avahi-daemon实现.matter本地解析
@@ -69,11 +83,40 @@ sudo systemctl enable avahi-daemon
 ~~~
 
 
+## test ping
+
+~~~
+root@raspberrypi:/data# ping -6 wwww.baidu.com
+ping: wwww.baidu.com: Address family for hostname not supported
+~~~
+
+ping 与目录有关？
+
+~~~
+root@raspberrypi:~# ping -6 www.baidu.com
+PING www.baidu.com(240e:ff:e020:99b:0:ff:b099:cff1) 56 data bytes
+64 bytes from 240e:ff:e020:99b:0:ff:b099:cff1: icmp_seq=1 ttl=50 time=21.0 ms
+64 bytes from 240e:ff:e020:99b:0:ff:b099:cff1: icmp_seq=2 ttl=50 time=21.2 ms
+
+~~~
+
+结果：
+1. 与登录的账号有关。修改参数后，需ssh需重新登录rpi
+
+2. 与路由器IPv6防火墙开启、关闭设置无关
+
+
 
 ## 检查关键节点
 
 ip addr
 
 ping6 raspberrypi.local
+
+ping raspberrypi.local
+
+/etc/sysctl.conf
+
+
 
 
